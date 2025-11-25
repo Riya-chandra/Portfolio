@@ -1,0 +1,16 @@
+{
+    "name": "Nikhil Soni - Software Developer Portfolio",
+    "short_name": "Nikhil Soni | nikhilij",
+    "description": "Nikhil Soni (nikhilij) - Full-Stack Developer and AI Engineer from KIIT University. React.js, Node.js, Python, AI/ML expert. 720+ problems solved.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#3b82f6",
+    "icons": [
+        {
+            "src": "/profile.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
