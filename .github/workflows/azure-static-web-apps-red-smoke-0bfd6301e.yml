@@ -23,14 +23,11 @@ jobs:
             - name: Fix .git permissions
               run: chmod -R u+w .git
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "20.x"
-
             - name: Build And Deploy
               id: builddeploy
               uses: Azure/static-web-apps-deploy@v1
+              env:
+                  ORYX_NODE_VERSION: "20"
               with:
                   azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_SMOKE_0BFD6301E }}
                   repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
@@ -39,7 +36,7 @@ jobs:
                   # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
                   app_location: "/" # App source code path
                   api_location: "" # Api source code path - optional
-                  output_location: "" # Built app content directory - optional
+                  output_location: "" # Built app content directory - leave empty for hybrid Next.js
                   ###### End of Repository/Build Configurations ######
 
     close_pull_request_job:
