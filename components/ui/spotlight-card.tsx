@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -16,14 +16,25 @@ export function SpotlightCard({
 	style,
 	...props
 }: SpotlightCardProps) {
+	const [isMobile, setIsMobile] = useState(false);
 	const mouseX = useMotionValue(0);
 	const mouseY = useMotionValue(0);
 	const spotlightX = useMotionValue(0);
 	const spotlightY = useMotionValue(0);
 
+	useEffect(() => {
+		const checkMobile = () => setIsMobile(window.innerWidth < 768);
+		checkMobile();
+		window.addEventListener("resize", checkMobile);
+		return () => window.removeEventListener("resize", checkMobile);
+	}, []);
+
 	const backgroundImage = useMotionTemplate`radial-gradient(300px circle at ${spotlightX}px ${spotlightY}px, rgba(${spotlightColor}, 0.15), transparent)`;
 
 	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+		// Skip mouse tracking on mobile for better performance
+		if (isMobile) return;
+
 		const { left, top } = e.currentTarget.getBoundingClientRect();
 		const x = e.clientX - left;
 		const y = e.clientY - top;

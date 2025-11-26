@@ -23,6 +23,13 @@ export function Particles({
 		const container = mountRef.current;
 		if (!container) return;
 
+		// Reduce particle count on mobile for better performance
+		const isMobile = window.innerWidth < 768;
+		const adjustedParticleCount = isMobile
+			? Math.min(particleCount * 0.3, 3000)
+			: particleCount;
+		const shouldAnimate = isMobile ? false : animate;
+
 		let camera: THREE.PerspectiveCamera;
 		let scene: THREE.Scene;
 		let material: THREE.PointsMaterial;
@@ -45,7 +52,7 @@ export function Particles({
 			const geometry = new THREE.BufferGeometry();
 			const vertices: number[] = [];
 
-			for (let i = 0; i < particleCount; i++) {
+			for (let i = 0; i < adjustedParticleCount; i++) {
 				vertices.push(
 					2000 * Math.random() - 1000,
 					2000 * Math.random() - 1000,
@@ -69,10 +76,11 @@ export function Particles({
 			scene.add(particles);
 
 			const renderer = new THREE.WebGLRenderer({
-				antialias: true,
+				antialias: !isMobile,
 				alpha: true,
 			});
-			renderer.setPixelRatio(window.devicePixelRatio);
+			// Cap pixel ratio on mobile for better performance
+			renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
 			renderer.setSize(window.innerWidth, window.innerHeight);
 			container.appendChild(renderer.domElement);
 
@@ -96,7 +104,7 @@ export function Particles({
 		const animateScene = () => {
 			if (!camera || !scene || !renderer || !material) return;
 
-			if (animate) {
+			if (shouldAnimate) {
 				const time = Date.now() * 0.00005;
 				const h = ((360 * (1.0 + time)) % 360) / 360;
 				material.color.setHSL(h, 0.5, 0.5);

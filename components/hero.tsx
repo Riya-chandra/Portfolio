@@ -7,11 +7,11 @@ import Image from "next/image";
 export function Hero() {
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-			{/* Background Liquid Elements */}
+			{/* Background Liquid Elements - Optimized for mobile */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
-				<div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-blue-600/20 rounded-full blur-[120px] animate-blob mix-blend-screen" />
-				<div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] bg-purple-600/20 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-screen" />
-				<div className="absolute bottom-[-10%] left-[20%] w-[45vw] h-[45vw] bg-indigo-600/20 rounded-full blur-[120px] animate-blob animation-delay-4000 mix-blend-screen" />
+				<div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-blue-600/20 rounded-full blur-[60px] md:blur-[120px] animate-blob mix-blend-screen will-change-transform" />
+				<div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] bg-purple-600/20 rounded-full blur-[60px] md:blur-[120px] animate-blob animation-delay-2000 mix-blend-screen will-change-transform" />
+				<div className="absolute bottom-[-10%] left-[20%] w-[45vw] h-[45vw] bg-indigo-600/20 rounded-full blur-[60px] md:blur-[120px] animate-blob animation-delay-4000 mix-blend-screen will-change-transform" />
 			</div>
 
 			<div className="container mx-auto px-6 relative z-10 text-center">
