@@ -146,8 +146,13 @@ export function Work() {
 											alt={project.title}
 											fill
 											className="object-cover transition-transform duration-700 group-hover:scale-110"
+											sizes="(max-width: 768px) 100vw, 50vw"
+											quality={75}
+											priority={index === 0}
+											placeholder="blur"
+											blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgZmlsbD0iIzIwMjAyMCIvPjwvc3ZnPg=="
 										/>
-										<div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+										<div className="absolute inset-0 bg-transparent md:bg-black/20 md:group-hover:bg-transparent transition-colors duration-500" />
 									</div>
 								</div>
 							</GlassCard>

@@ -240,15 +240,15 @@ export function About() {
 								transition={{ delay: index * 0.1 }}
 								className="flex"
 							>
+								{/* ElectricBorder for large screens (lg+) */}
 								<ElectricBorder
 									color="#7df9ff"
 									speed={1}
 									chaos={0.5}
 									thickness={2}
 									style={{ borderRadius: 16 }}
-									className="flex-1 w-40 h-70 p-5 flex flex-col"
+									className="hidden lg:flex flex-1 w-40 h-70 p-5 flex-col"
 								>
-									{/* <GlassCard className="p-6 h-full min-h-[260px] flex flex-col"> */}
 									<div className="flex items-center gap-3 mb-8">
 										<div className="p-3 rounded-lg bg-white/5 text-blue-400">
 											{area.icon}
@@ -267,8 +267,29 @@ export function About() {
 											</span>
 										))}
 									</div>
-									{/* </GlassCard> */}
 								</ElectricBorder>
+
+								{/* GlassCard fallback for small/medium screens */}
+								<GlassCard className="lg:hidden p-6 h-full min-h-[260px] flex flex-col flex-1">
+									<div className="flex items-center gap-3 mb-8">
+										<div className="p-3 rounded-lg bg-white/5 text-blue-400">
+											{area.icon}
+										</div>
+										<h4 className="text-lg font-semibold leading-tight">
+											{area.title}
+										</h4>
+									</div>
+									<div className="flex flex-wrap gap-2 mt-auto">
+										{area.skills.map((skill, idx) => (
+											<span
+												key={idx}
+												className="px-3 py-1.5 text-sm rounded-full bg-white/5 border border-white/10 text-white/80"
+											>
+												{skill}
+											</span>
+										))}
+									</div>
+								</GlassCard>
 							</motion.div>
 						))}
 					</div>

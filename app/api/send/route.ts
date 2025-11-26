@@ -36,19 +36,30 @@ export async function POST(request: NextRequest) {
 
 		// Create transporter
 		const transporter = nodemailer.createTransport({
-			service: "gmail",
+			host: "smtp.gmail.com",
+			port: 465,
+			secure: true,
 			auth: {
 				user: process.env.EMAIL_USER,
 				pass: process.env.EMAIL_PASS,
 			},
 		});
 
+		// (optional) verify transporter connection while debugging - remove in production if you want
+		try {
+			await transporter.verify();
+			console.log("SMTP connection verified");
+		} catch (vErr) {
+			console.warn("SMTP verify failed:", vErr);
+		}
+
 		// Email options
 		const mailOptions = {
-			from: process.env.EMAIL_USER,
-			to: "nikhilprince973@gmail.com",
+			from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+			to: process.env.EMAIL_TO || process.env.EMAIL_USER, // <-- use EMAIL_TO or fallback to EMAIL_USER
 			replyTo: email,
 			subject: `Portfolio Contact: Message from ${name}`,
+			text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
 			html: `
 				<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
 					<div style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">

@@ -26,6 +26,7 @@ export function Hero() {
 							src="/profile.png"
 							alt="Nikhil Soni"
 							fill
+							sizes="192px"
 							className="object-cover"
 							priority
 						/>
