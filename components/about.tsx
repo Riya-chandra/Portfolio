@@ -309,6 +309,7 @@ export function About() {
 							shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
 							duration={14}
 							borderWidth={1}
+							className="hidden md:block"
 						/>
 						<div className="flex items-center justify-center gap-3 mb-6">
 							<Zap className="w-10 h-10 text-yellow-400" />
