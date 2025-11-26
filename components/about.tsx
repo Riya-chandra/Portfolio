@@ -334,7 +334,7 @@ export function About() {
 							</div>
 							<div className="grid md:grid-cols-2 gap-4">
 								{/* AI AnswerBot 2.0 */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<Bot className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
 										<div>
@@ -352,7 +352,7 @@ export function About() {
 								</div>
 
 								{/* Intelligent File Organizer */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<FolderSync className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
 										<div>
@@ -370,7 +370,7 @@ export function About() {
 								</div>
 
 								{/* Social Media AI Strategist */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<MessageSquare className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
 										<div>
@@ -388,7 +388,7 @@ export function About() {
 								</div>
 
 								{/* Team Inventory AI */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<Package className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
 										<div>
@@ -417,7 +417,7 @@ export function About() {
 							</div>
 							<div className="grid md:grid-cols-2 gap-4">
 								{/* Rocket Telemetry AI */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<BarChart3 className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
 										<div>
@@ -436,7 +436,7 @@ export function About() {
 								</div>
 
 								{/* AI Video Summarizer */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<Video className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
 										<div>
@@ -453,7 +453,7 @@ export function About() {
 								</div>
 
 								{/* CME Symbol Finder */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<DollarSign className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
 										<div>
@@ -471,7 +471,7 @@ export function About() {
 								</div>
 
 								{/* Intelligent PDF Parser */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<FileText className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
 										<div>
@@ -499,7 +499,7 @@ export function About() {
 							</div>
 							<div className="grid md:grid-cols-2 gap-4">
 								{/* DataVault */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<Shield className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
 										<div>
@@ -517,7 +517,7 @@ export function About() {
 								</div>
 
 								{/* Decentralized Identity Research */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
 									<div className="flex items-start gap-3 mb-3">
 										<Fingerprint className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
 										<div>

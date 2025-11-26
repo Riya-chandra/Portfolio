@@ -48,57 +48,106 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
 	const svgRef = useRef<SVGSVGElement | null>(null);
 	const rootRef = useRef<HTMLDivElement | null>(null);
 	const strokeRef = useRef<HTMLDivElement | null>(null);
+	const animCacheRef = useRef<{
+		dyAnims?: SVGAnimateElement[];
+		dxAnims?: SVGAnimateElement[];
+		disp?: Element | null;
+		filterEl?: SVGFilterElement | null;
+		lastWidth?: number;
+		lastHeight?: number;
+	}>({});
+	const rafRef = useRef<number | undefined>(undefined);
 
 	const updateAnim = () => {
 		const svg = svgRef.current;
 		const host = rootRef.current;
 		if (!svg || !host) return;
 
-		if (strokeRef.current) {
-			strokeRef.current.style.filter = `url(#${filterId})`;
+		// Cancel pending RAF to avoid cascading updates
+		if (rafRef.current) {
+			cancelAnimationFrame(rafRef.current);
 		}
 
-		const width = Math.max(
-			1,
-			Math.round(host.clientWidth || host.getBoundingClientRect().width || 0)
-		);
-		const height = Math.max(
-			1,
-			Math.round(host.clientHeight || host.getBoundingClientRect().height || 0)
-		);
+		rafRef.current = requestAnimationFrame(() => {
+			if (strokeRef.current) {
+				strokeRef.current.style.filter = `url(#${filterId})`;
+			}
 
-		const dyAnims = Array.from(
-			svg.querySelectorAll<SVGAnimateElement>('feOffset > animate[attributeName="dy"]')
-		);
-		if (dyAnims.length >= 2) {
-			dyAnims[0].setAttribute("values", `${height}; 0`);
-			dyAnims[1].setAttribute("values", `0; -${height}`);
-		}
+			const width = Math.max(
+				1,
+				Math.round(host.clientWidth || host.getBoundingClientRect().width || 0)
+			);
+			const height = Math.max(
+				1,
+				Math.round(host.clientHeight || host.getBoundingClientRect().height || 0)
+			);
 
-		const dxAnims = Array.from(
-			svg.querySelectorAll<SVGAnimateElement>('feOffset > animate[attributeName="dx"]')
-		);
-		if (dxAnims.length >= 2) {
-			dxAnims[0].setAttribute("values", `${width}; 0`);
-			dxAnims[1].setAttribute("values", `0; -${width}`);
-		}
+			// Skip if dimensions haven't changed
+			if (
+				animCacheRef.current.lastWidth === width &&
+				animCacheRef.current.lastHeight === height
+			) {
+				return;
+			}
 
-		const baseDur = 6;
-		const dur = Math.max(0.001, baseDur / (speed || 1));
-		[...dyAnims, ...dxAnims].forEach((a) => a.setAttribute("dur", `${dur}s`));
+			animCacheRef.current.lastWidth = width;
+			animCacheRef.current.lastHeight = height;
 
-		const disp = svg.querySelector("feDisplacementMap");
-		if (disp) disp.setAttribute("scale", String(30 * (chaos || 1)));
+			// Cache DOM queries
+			if (!animCacheRef.current.dyAnims) {
+				animCacheRef.current.dyAnims = Array.from(
+					svg.querySelectorAll<SVGAnimateElement>(
+						'feOffset > animate[attributeName="dy"]'
+					)
+				);
+			}
+			if (!animCacheRef.current.dxAnims) {
+				animCacheRef.current.dxAnims = Array.from(
+					svg.querySelectorAll<SVGAnimateElement>(
+						'feOffset > animate[attributeName="dx"]'
+					)
+				);
+			}
+			if (!animCacheRef.current.disp) {
+				animCacheRef.current.disp = svg.querySelector("feDisplacementMap");
+			}
+			if (!animCacheRef.current.filterEl) {
+				animCacheRef.current.filterEl = svg.querySelector<SVGFilterElement>(
+					`#${CSS.escape(filterId)}`
+				);
+			}
 
-		const filterEl = svg.querySelector<SVGFilterElement>(`#${CSS.escape(filterId)}`);
-		if (filterEl) {
-			filterEl.setAttribute("x", "-200%");
-			filterEl.setAttribute("y", "-200%");
-			filterEl.setAttribute("width", "500%");
-			filterEl.setAttribute("height", "500%");
-		}
+			const dyAnims = animCacheRef.current.dyAnims || [];
+			const dxAnims = animCacheRef.current.dxAnims || [];
 
-		requestAnimationFrame(() => {
+			// Batch DOM updates
+			if (dyAnims.length >= 2) {
+				dyAnims[0].setAttribute("values", `${height}; 0`);
+				dyAnims[1].setAttribute("values", `0; -${height}`);
+			}
+
+			if (dxAnims.length >= 2) {
+				dxAnims[0].setAttribute("values", `${width}; 0`);
+				dxAnims[1].setAttribute("values", `0; -${width}`);
+			}
+
+			const baseDur = 6;
+			const dur = Math.max(0.001, baseDur / (speed || 1));
+			[...dyAnims, ...dxAnims].forEach((a) => a.setAttribute("dur", `${dur}s`));
+
+			if (animCacheRef.current.disp) {
+				animCacheRef.current.disp.setAttribute("scale", String(30 * (chaos || 1)));
+			}
+
+			if (animCacheRef.current.filterEl) {
+				const filterEl = animCacheRef.current.filterEl;
+				filterEl.setAttribute("x", "-200%");
+				filterEl.setAttribute("y", "-200%");
+				filterEl.setAttribute("width", "500%");
+				filterEl.setAttribute("height", "500%");
+			}
+
+			// Begin animations after all attributes are set
 			[...dyAnims, ...dxAnims].forEach((a: any) => {
 				if (typeof a.beginElement === "function") {
 					try {
@@ -115,10 +164,32 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
 
 	useLayoutEffect(() => {
 		if (!rootRef.current) return;
-		const ro = new ResizeObserver(() => updateAnim());
-		ro.observe(rootRef.current);
-		updateAnim();
-		return () => ro.disconnect();
+
+		let resizeTimeout: NodeJS.Timeout;
+		let ro: ResizeObserver | null = null;
+
+		// Lazy initialize to avoid simultaneous updates on multiple instances
+		const initDelay = setTimeout(() => {
+			if (!rootRef.current) return;
+
+			// Throttle ResizeObserver updates to prevent cascade
+			ro = new ResizeObserver(() => {
+				clearTimeout(resizeTimeout);
+				resizeTimeout = setTimeout(() => updateAnim(), 100);
+			});
+
+			ro.observe(rootRef.current);
+			updateAnim();
+		}, Math.random() * 200); // Stagger initialization by up to 200ms
+
+		return () => {
+			clearTimeout(initDelay);
+			clearTimeout(resizeTimeout);
+			if (ro) ro.disconnect();
+			if (rafRef.current) {
+				cancelAnimationFrame(rafRef.current);
+			}
+		};
 	}, []);
 
 	const inheritRadius: CSSProperties = {

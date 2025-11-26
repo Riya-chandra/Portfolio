@@ -1,12 +1,52 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
-import { About } from "@/components/about";
-import { Services } from "@/components/services";
-import { Skills } from "@/components/skills";
-import { Work } from "@/components/work";
-import { Certificates } from "@/components/certificates";
-import { ProjectCTA } from "@/components/project-cta";
 import { Footer } from "@/components/footer";
+
+// Lazy load heavy components below the fold
+const About = dynamic(() => import("@/components/about").then((mod) => ({ default: mod.About })), {
+	ssr: false,
+	loading: () => <div className="min-h-screen" />,
+});
+
+const Services = dynamic(
+	() => import("@/components/services").then((mod) => ({ default: mod.Services })),
+	{
+		ssr: false,
+		loading: () => <div className="min-h-[600px]" />,
+	}
+);
+
+const Skills = dynamic(
+	() => import("@/components/skills").then((mod) => ({ default: mod.Skills })),
+	{
+		ssr: false,
+		loading: () => <div className="min-h-[600px]" />,
+	}
+);
+
+const Work = dynamic(() => import("@/components/work").then((mod) => ({ default: mod.Work })), {
+	ssr: false,
+	loading: () => <div className="min-h-screen" />,
+});
+
+const Certificates = dynamic(
+	() => import("@/components/certificates").then((mod) => ({ default: mod.Certificates })),
+	{
+		ssr: false,
+		loading: () => <div className="min-h-[600px]" />,
+	}
+);
+
+const ProjectCTA = dynamic(
+	() => import("@/components/project-cta").then((mod) => ({ default: mod.ProjectCTA })),
+	{
+		ssr: false,
+		loading: () => <div className="min-h-[400px]" />,
+	}
+);
 
 export default function Home() {
 	return (
