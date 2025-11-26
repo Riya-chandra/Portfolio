@@ -16,9 +16,9 @@ export function Hero() {
 
 			<div className="container mx-auto px-6 relative z-10 text-center">
 				<motion.div
-					initial={{ opacity: 0, scale: 0.8 }}
+					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
-					transition={{ type: "spring", stiffness: 100, damping: 15, duration: 0.8 }}
+					transition={{ duration: 0.5, ease: "easeOut" }}
 					className="mb-8"
 				>
 					<div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
@@ -36,7 +36,7 @@ export function Hero() {
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ type: "spring", stiffness: 80, damping: 12, delay: 0.2 }}
+					transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
 				>
 					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
 						<span className="relative flex h-2 w-2">
@@ -50,18 +50,18 @@ export function Hero() {
 				</motion.div>
 
 				<motion.h1
-					initial={{ opacity: 0, y: 30 }}
+					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ type: "spring", stiffness: 70, damping: 12, delay: 0.4 }}
+					transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
 					className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 text-white drop-shadow-xl"
 				>
 					Nikhil Soni
 				</motion.h1>
 
 				<motion.p
-					initial={{ opacity: 0, y: 30 }}
+					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ type: "spring", stiffness: 70, damping: 12, delay: 0.6 }}
+					transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
 					className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-12 leading-relaxed"
 				>
 					Software Developer | React Specialist | Backend Engineer

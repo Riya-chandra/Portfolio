@@ -94,24 +94,47 @@ export function Particles({
 			renderer.setSize(window.innerWidth, window.innerHeight);
 		};
 
+		let rafId: number | null = null;
 		const handlePointerMove = (event: PointerEvent) => {
 			if (event.isPrimary) {
-				mouseX = event.clientX - window.innerWidth / 2;
-				mouseY = event.clientY - window.innerHeight / 2;
+				// Debounce pointer updates using RAF
+				if (rafId !== null) return;
+				rafId = requestAnimationFrame(() => {
+					mouseX = event.clientX - window.innerWidth / 2;
+					mouseY = event.clientY - window.innerHeight / 2;
+					rafId = null;
+				});
 			}
 		};
+
+		let lastFrameTime = Date.now();
+		const targetFPS = isMobile ? 30 : 60; // Cap at 30fps on mobile
+		const frameInterval = 1000 / targetFPS;
 
 		const animateScene = () => {
 			if (!camera || !scene || !renderer || !material) return;
 
+			const now = Date.now();
+			const elapsed = now - lastFrameTime;
+
+			// Throttle frame rate
+			if (elapsed < frameInterval) {
+				animationFrameId = requestAnimationFrame(animateScene);
+				return;
+			}
+
+			lastFrameTime = now - (elapsed % frameInterval);
+
 			if (shouldAnimate) {
-				const time = Date.now() * 0.00005;
+				const time = now * 0.00005;
 				const h = ((360 * (1.0 + time)) % 360) / 360;
 				material.color.setHSL(h, 0.5, 0.5);
 			}
 
-			camera.position.x += (mouseX - camera.position.x) * 0.05;
-			camera.position.y += (-mouseY - camera.position.y) * 0.05;
+			// Reduce camera movement smoothing on mobile for better performance
+			const smoothFactor = isMobile ? 0.02 : 0.05;
+			camera.position.x += (mouseX - camera.position.x) * smoothFactor;
+			camera.position.y += (-mouseY - camera.position.y) * smoothFactor;
 			camera.lookAt(scene.position);
 
 			renderer.render(scene, camera);
