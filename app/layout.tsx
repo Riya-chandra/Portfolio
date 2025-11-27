@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 		title: "Nikhil Soni | Full-Stack Developer & AI Engineer | KIIT University",
 		description:
 			"Nikhil Soni (nikhilij) - Software Developer from KIIT University specializing in React.js, Node.js, AI/ML, and cloud technologies. 720+ coding problems solved. Building innovative web applications.",
-		url: "https://green-bay-02a2a5c1e.4.azurestaticapps.net/",
+		url: "https://nikhilij.tech/",
 		siteName: "Nikhil Soni Portfolio",
 		locale: "en_IN",
 		type: "website",
@@ -84,7 +84,7 @@ export default function RootLayout({
 				/>
 				<link
 					rel="canonical"
-					href="https://green-bay-02a2a5c1e.4.azurestaticapps.net/"
+					href="https://nikhilij.tech/"
 				/>
 				<meta
 					name="author"
@@ -106,7 +106,7 @@ export default function RootLayout({
 							"@type": "Person",
 							name: "Nikhil Soni",
 							alternateName: "nikhilij",
-							url: "https://green-bay-02a2a5c1e.4.azurestaticapps.net/",
+							url: "https://nikhilij.tech/",
 							jobTitle: "Software Developer",
 							worksFor: {
 								"@type": "EducationalOrganization",
