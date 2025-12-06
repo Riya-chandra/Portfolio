@@ -23,8 +23,8 @@ export function Hero() {
 				>
 					<div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
 						<Image
-							src="/profile.png"
-							alt="Nikhil Soni"
+							src="/profile.jpg"
+							alt="Riya Chandra"
 							fill
 							sizes="192px"
 							className="object-cover"
@@ -55,7 +55,7 @@ export function Hero() {
 					transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
 					className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 text-white drop-shadow-xl"
 				>
-					Nikhil Soni
+					Riya Chandra
 				</motion.h1>
 
 				<motion.p
@@ -67,7 +67,7 @@ export function Hero() {
 					Software Developer | React Specialist | Backend Engineer
 					<br />
 					<span className="text-white/80 text-base">
-						KIIT University CSE Student | nikhilij on GitHub | Passionate about building
+					    ABESIT CSE Student | riyachandra on GitHub | Passionate about building
 						scalable web applications with React.js, Node.js, Python, AI Agents,
 						LangChain, and modern technologies.
 					</span>
@@ -75,12 +75,12 @@ export function Hero() {
 
 				{/* Hidden SEO Keywords */}
 				<div className="sr-only">
-					Nikhil Soni - Full-Stack Developer from KIIT University Bhubaneswar, Odisha.
+					Riya Chandra - Full-Stack Developer from ABES Institute of Technology, Ghaziabad, Uttar Pradesh.
 					Software Engineer specializing in React.js, Next.js, Node.js, Python,
 					TypeScript, JavaScript, AI/ML, LangChain, LangGraph, RAG Systems, AI Agents,
-					Azure OpenAI, AWS, GCP, Docker, Kubernetes. nikhilij GitHub profile. LeetCode
-					programmer with 720+ problems solved. GeeksforGeeks expert. Open source
-					contributor. From Patna, Bihar, India. Contact: nikhilprince973@gmail.com,
+					Azure OpenAI, AWS, GCP, Docker, Kubernetes. riyachandra GitHub profile. LeetCode
+					programmer with 500+ problems solved. GeeksforGeeks expert. Open source
+					contributor. From Patna, Bihar, India. Contact: riyachandra9119@gmail.com,
 					+91-9263226570.
 				</div>
 

@@ -76,7 +76,7 @@ export function Navbar() {
           )}
         >
           <Link href="/" className="text-2xl font-bold tracking-tighter relative z-50 text-white">
-            Nikhil Soni<span className="text-blue-400">.</span>
+            Riya Chandra<span className="text-blue-400">.</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -141,7 +141,7 @@ export function Navbar() {
                   className="text-xl font-bold tracking-tight text-white"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Nikhil Soni<span className="text-blue-400">.</span>
+                  Riya Chandra<span className="text-blue-400">.</span>
                 </Link>
                 <button
                   aria-label="Close menu"
@@ -185,7 +185,7 @@ export function Navbar() {
                 {/* Copyright / Footer at bottom of scroll area */}
                 <div className="mt-12 pt-6 border-t border-white/10">
                    <p className="text-xs text-white/40 font-medium tracking-wide">
-                     &copy; 2025 Nikhil Soni.
+                     &copy; 2025 Riya Chandra.
                    </p>
                 </div>
               </div>

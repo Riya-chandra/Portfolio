@@ -1,4 +1,4 @@
-# Nikhil Soni - Portfolio Website
+# Riya Chandra - Portfolio Website
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.0.3-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2.0-blue?style=flat-square&logo=react)](https://react.dev/)
@@ -36,8 +36,7 @@ Modern, responsive portfolio website showcasing projects, skills, and contact in
 
 ```bash
 # Clone the repository
-git clone https://github.com/nikhilij/New-Personal-Portfolio.git
-cd niknew
+git clone https://github.com/Riya-chandra/New-Personal-Portfolio.git
 
 # Install dependencies
 npm install
@@ -121,7 +120,7 @@ EMAIL_PASS=your-app-password-here
 ## 📁 Project Structure
 
 ```
-niknew/
+rc/
 ├── app/
 │   ├── api/
 │   │   └── send/              # Email API endpoint
@@ -247,7 +246,7 @@ npm run build
 
 ### More Help?
 
-See [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md) or contact me at nikhilprince973@gmail.com
+See [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md) or contact me at riyachandra9119@gmail.com
 
 ---
 
@@ -280,12 +279,11 @@ This project is private. All rights reserved.
 
 ## 👨‍💻 Author
 
-**Nikhil Soni**
+**Riya Chandra**
 
-- 📧 Email: [nikhilprince973@gmail.com](mailto:nikhilprince973@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/nikhilsoni973](https://linkedin.com/in/nikhilsoni973)
-- 🐙 GitHub: [@nikhilij](https://github.com/nikhilij)
-- 📱 Phone: +91 9263226570
+- 📧 Email: [riyachandra9119@gmail.com](mailto:riyachandra9119@gmail.com)
+- 💼 LinkedIn: [https://www.linkedin.com/in/riya-chandra-856657248/](https://www.linkedin.com/in/riya-chandra-856657248/)
+- 🐙 GitHub: [@riyachandra](https://github.com/Riya-chandra)
 
 ---
 
@@ -304,7 +302,7 @@ Built with ❤️ using:
 
 ## ⭐ Show Your Support
 
-If you like this portfolio, give it a ⭐ on [GitHub](https://github.com/nikhilij/New-Personal-Portfolio)!
+If you like this portfolio, give it a ⭐ on [GitHub](https://github.com/Riya-chandra)!
 
 ---
 
@@ -312,14 +310,16 @@ If you like this portfolio, give it a ⭐ on [GitHub](https://github.com/nikhili
 
 For questions, issues, or collaboration:
 
-- 📧 **Email**: nikhilprince973@gmail.com
-- 💬 **LinkedIn**: [Message me](https://linkedin.com/in/nikhilsoni973)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/nikhilij/New-Personal-Portfolio/issues)
+- 📧 **Email**: riyachandra9119@gmail.com
+- 💬 **LinkedIn**: [Message me](https://www.linkedin.com/in/riya-chandra-856657248/)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Riya-chandra)
 
 ---
 
-**Status**: 🟢 Production Ready | **Version**: 1.0.0 | **Last Updated**: November 26, 2025
+**Status**: 🟢 Production Ready | **Version**: 1.0.0 | **Last Updated**: November 30, 2025
 
 ---
 
-Made with 💻 and ☕ by Nikhil Soni
+Made with 💻 and ☕ by Riya Chandra
+#   P o r t f o l i o  
+ 

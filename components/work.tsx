@@ -6,59 +6,65 @@ import Image from "next/image";
 
 const projects = [
 	{
-		title: "AI Telemetry Analyst by Nikhil Soni",
-		category: "Backend Service | Telemetry & Anomaly Detection",
-		image: "/rocket.jpg",
+		title: "Multi-Agent WhatsApp Automation System",
+		category: "AI Automation | Multi-Agent Architecture",
+		image: "/whatsapp-ai.jpg",
 		color: "from-sky-500/20 to-indigo-600/20",
-		link: "#",
+		link: "https://github.com/Riya-chandra/MultiTaskAssitant",
 		description:
-			"Backend service for telemetry ingestion, anomaly detection, and natural language Q&A. FastAPI + PostgreSQL + LangGraph. Intelligent telemetry monitoring system for rocket assets using AI-powered anomaly detection and natural language querying.",
+			"Built an AI-powered WhatsApp Personal Assistant using FastAPI, LangChain multi-agent architecture, and Twilio. Supports scheduling, Gmail automation, and real-time research. Engineered async tool-calling, conversational memory, and seamless Google Calendar & Gmail integration for production-grade automation.",
 	},
+
 	{
-		title: "CME Symbol Finder AI by Nikhil Soni",
-		category: "Trading Symbol Search | AI Application",
-		image: "/image.png",
+		title: "Coding Collab Platform",
+		category: "Full-Stack Application | Real-Time Collaboration",
+		image: "/collab.jpg",
 		color: "from-blue-500/20 to-cyan-500/20",
-		link: "https://cme-symbol-finder.vercel.app/",
+		link: "codecollab-frontend.vercel.app",
 		description:
-			"AI-powered trading symbol search by Nikhil Soni (nikhilij). CME Group futures/options with 17+ metadata. Next.js 16, TypeScript, LangChain, Azure OpenAI, Pinecone vector database.",
+			"Developed a full real-time collaborative coding platform using Next.js, LangChain, WebSockets, and Socket.IO. Features shared editor, compiler, video/audio calls, chat, shared whiteboard, study rooms, DSA quizzes, and student feeds. Integrated CRUD APIs for secure and scalable session management.",
 	},
+
 	{
-		title: "Wikipedia AI Summarizer by Nikhil Soni",
-		category: "Enterprise API Service | AI-Powered Summarization",
-		image: "/wiki.jpg",
+		title: "Event Handling System",
+		category: "MERN Application | Event Management",
+		image: "/event.jpg",
 		color: "from-emerald-500/20 to-teal-600/20",
-		link: "#",
+		link: "https://github.com/Riya-chandra/Event_producer",
 		description:
-			"Enterprise-grade API service generating intelligent Wikipedia summaries using GitHub AI (GPT-4o). Features batch processing, multiple summary styles, comprehensive analytics, and production-ready architecture. Perfect for researchers, content creators, and developers needing automated high-quality summaries at scale.",
+			"Developed a dynamic event management system with full CRUD operations. Added advanced search, filtering, and categorization improving discoverability by 25%. Built authentication using Clerk, integrated Stripe payments, and implemented OAuth + SSO flows.",
 	},
+
 	{
-		title: "Auriville - Global Real Estate Platform by Nikhil Soni",
-		category: "🌍 Full-Stack Application | Interactive Mapping",
-		image: "/aurville.png",
-		color: "from-amber-500/20 to-orange-600/20",
-		link: "#",
-		description:
-			"Map-first global real estate platform by Nikhil Soni (nikhilij) for buying, selling, and renting properties worldwide. Features interactive Leaflet maps, AI property suggestions, virtual tours, secure transactions, and comprehensive property management. Built with React, FastAPI, MongoDB, and advanced geospatial technology.",
-	},
-	{
-		title: "UsePopcorn - Movie Tracker by Nikhil Soni",
-		category: "React Application | Full-Stack Project",
-		image: "/p2.png",
+		title: "Cognitive Rag SuperEngine",
+		category: "AI assistant",
+		image: "/chat.jpg",
 		color: "from-purple-500/20 to-pink-500/20",
-		link: "https://usepopcorn-beryl.vercel.app/",
+		link: "https://github.com/Riya-chandra/Cognitive-Rag-SuperEngine",
 		description:
-			"Movie rating and tracker app by Nikhil Soni (nikhilij). Built with React.js, API integration, responsive design, interactive UI.",
+			"All-in-one AI assistant powered by LLMs, RAG pipelines, and agents for PDF Q&A, web search, and content summarisation",
 	},
+
 	{
-		title: "AI Customer Support Chatbot by Nikhil Soni",
-		category: "AI Application | ChatBot Development",
-		image: "/p3.png",
-		color: "from-orange-500/20 to-red-500/20",
-		link: "https://thankful-desert-070c0d21e.6.azurestaticapps.net/",
+		title: "Real-Time Chat Application",
+		category: "Realtime Systems | WebSockets + Socket.IO",
+		image: "/chat.jpg",
+		color: "from-purple-500/20 to-pink-500/20",
+		link: "#",
 		description:
-			"Intelligent customer support chatbot by Nikhil Soni (nikhilij). CopilotKit, Azure OpenAI, Next.js 16, MongoDB. Real-time ticket management and AI conversations.",
+			"Created a low-latency real-time chat system using Socket.IO and WebSockets. Implemented message broadcasting, room management, and read-receipts. Designed for scalable multi-user communication with optimized event flow.",
 	},
+
+
+	{
+		title: "AI Resume Builder & ATS Analyzer",
+		category: "AI Tooling | Recruitment Tech",
+		image: "/resume.jpg",
+		color: "from-indigo-500/20 to-purple-500/20",
+		link: "#",
+		description:
+			"Built a resume-building module generating downloadable resumes and ATS scores. Helped increase job application success rate by 30%. Integrated prompt-handling logic using OpenAI + LangChain for intelligent resume insights.",
+	}
 ];
 
 export function Work() {
@@ -92,7 +98,7 @@ export function Work() {
 						</motion.p>
 					</div>
 					<motion.a
-						href="https://github.com/nikhilij"
+						href="https://github.com/Riya-chandra"
 						target="_blank"
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}

@@ -6,24 +6,24 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-	title: "Nikhil Soni | Software Developer | KIIT University | nikhilij",
+	title: "Riya Chandra | Software Developer | ABESIT Ghaziabad | riyachandra",
 	description:
-		"Nikhil Soni - Full-Stack Developer and AI Engineer from KIIT University Bhubaneswar. Expert in React.js, Node.js, Next.js, Python, AI Agents, LangChain, and cloud technologies. 720+ problems solved on LeetCode, GeeksforGeeks. GitHub: nikhilij. Building scalable web applications and AI-powered solutions.",
+		"Riya Chandra - Full-Stack Developer and AI Engineer from ABESIT Ghaziabad. Expert in React.js, Node.js, Next.js, Python, AI Agents, LangChain, and cloud technologies. 500+ problems solved on LeetCode, GeeksforGeeks. GitHub: riyachandra. Building scalable web applications and AI-powered solutions.",
 	keywords: [
-		"Nikhil Soni",
-		"nikhilij",
-		"Nikhil Soni KIIT",
-		"Nikhil Soni Developer",
-		"Nikhil Soni Software Engineer",
-		"KIIT University CSE",
-		"Full-Stack Developer Bhubaneswar",
+		"Riya Chandra",
+		"riyachandra",
+		"Riya Chandra ABESIT",
+		"Riya Chandra Developer",
+		"Riya Chandra Software Engineer",
+		"ABES INSTITUTE OF TECHNOLOGY CSE",
+		"Full-Stack Developer ",
 		"React Developer India",
 		"Node.js Developer",
 		"AI Engineer",
 		"LangChain Developer",
 		"Next.js Developer",
 		"Python Developer",
-		"GitHub nikhilij",
+		"GitHub riyachandra",
 		"LeetCode programmer",
 		"GeeksforGeeks coder",
 		"Azure Developer",
@@ -33,24 +33,24 @@ export const metadata: Metadata = {
 		"LangGraph",
 		"Patna Bihar Developer",
 	],
-	authors: [{ name: "Nikhil Soni" }],
-	creator: "Nikhil Soni",
-	publisher: "Nikhil Soni",
+	authors: [{ name: "Riya Chandra" }],
+	creator: "Riya Chandra",
+	publisher: "Riya Chandra",
 	openGraph: {
-		title: "Nikhil Soni | Full-Stack Developer & AI Engineer | KIIT University",
+		title: "Riya Chandra | Full-Stack Developer & AI Engineer | ABESIT",
 		description:
-			"Nikhil Soni (nikhilij) - Software Developer from KIIT University specializing in React.js, Node.js, AI/ML, and cloud technologies. 720+ coding problems solved. Building innovative web applications.",
-		url: "https://nikhilij.tech/",
-		siteName: "Nikhil Soni Portfolio",
+			"Riya Chandra (riyachandra) - Software Developer from ABESIT specializing in React.js, Node.js, AI/ML, and cloud technologies. 500+ coding problems solved. Building innovative web applications.",
+		url: "https://riyachandra.tech/",
+		siteName: "Riya Chandra Portfolio",
 		locale: "en_IN",
 		type: "website",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Nikhil Soni | Software Developer | KIIT",
+		title: "Riya Chandra | Software Developer | ABESIT",
 		description:
-			"Full-Stack Developer & AI Engineer from KIIT University. React, Node.js, Python, AI Agents. GitHub: nikhilij",
-		creator: "@NikhilSoni18992",
+			"Full-Stack Developer & AI Engineer from ABESIT. React, Node.js, Python, AI Agents. GitHub: riyachandra",
+		creator: "@Riyachandra",
 	},
 	robots: {
 		index: true,
@@ -84,11 +84,11 @@ export default function RootLayout({
 				/>
 				<link
 					rel="canonical"
-					href="https://nikhilij.tech/"
+					href="https://riyachandra.tech/"
 				/>
 				<meta
 					name="author"
-					content="Nikhil Soni"
+					content="Riya Chandra"
 				/>
 				<meta
 					name="geo.region"
@@ -104,14 +104,14 @@ export default function RootLayout({
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							"@type": "Person",
-							name: "Nikhil Soni",
-							alternateName: "nikhilij",
-							url: "https://nikhilij.tech/",
+							name: "Riya Chandra",
+							alternateName: "riyachandra",
+							url: "https://riyachandra.tech/",
 							jobTitle: "Software Developer",
 							worksFor: {
 								"@type": "EducationalOrganization",
-								name: "KIIT University",
-								address: "Bhubaneswar, Odisha, India",
+								name: "ABES INSTITUTE OF TECHNOLOGY",
+								address: "Ghaziabad, Uttar Pradesh, India",
 							},
 							address: {
 								"@type": "PostalAddress",
@@ -119,13 +119,13 @@ export default function RootLayout({
 								addressRegion: "Bihar",
 								addressCountry: "India",
 							},
-							email: "nikhilprince973@gmail.com",
+							email: "riyachandra9119@gmail.com",
 							telephone: "+919263226570",
 							sameAs: [
-								"https://github.com/nikhilij",
-								"https://linkedin.com/in/nikhilsoni973",
-								"https://leetcode.com/u/nikhil12soni/",
-								"https://www.geeksforgeeks.org/user/nikhilprsd53/",
+								"https://github.com/Riya-chandra",
+								"https://www.linkedin.com/in/riya-chandra-856657248/",
+								"https://leetcode.com/u/riyachandra/",
+								"https://www.geeksforgeeks.org/profile/riyachanav1d",
 							],
 							knowsAbout: [
 								"React.js",

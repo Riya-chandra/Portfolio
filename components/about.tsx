@@ -27,9 +27,9 @@ import { ShineBorder } from "@/components/ui/shine-border";
 
 export function About() {
 	const stats = [
-		{ label: "Problems Solved", value: "720+", platforms: "LeetCode, GFG, HackerRank" },
-		{ label: "Open Source", value: "80+", platforms: "GitHub Repositories" },
-		{ label: "CGPA", value: "8.61", platforms: "CSE, KIIT University" },
+		{ label: "Problems Solved", value: "500+", platforms: "LeetCode, GFG, Codechef" },
+		{ label: "Open Source", value: "10+", platforms: "GitHub Repositories" },
+		{ label: "CGPA", value: "8.0", platforms: "CSE, ABES Institute of technology" },
 	];
 
 	const expertise = [
@@ -46,14 +46,14 @@ export function About() {
 				"LangGraph",
 				"RAG Systems",
 				"AI Agents",
-				"MCP Servers",
-				"Azure OpenAI",
+				// "MCP Servers",
+				// "Azure OpenAI",
 			],
 		},
 		{
 			icon: <Cloud className="w-6 h-6" />,
 			title: "Cloud & DevOps",
-			skills: ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "Linux"],
+			skills: ["AWS", "Azure", "Docker", "Kubernetes", "Linux"],
 		},
 		{
 			icon: <Database className="w-6 h-6" />,
@@ -98,18 +98,17 @@ export function About() {
 							<div className="space-y-4 text-white/70 leading-relaxed">
 								<p>
 									I'm{" "}
-									<strong className="text-white">Nikhil Soni (nikhilij)</strong>,
-									a driven Computer Science and Engineering student at KIIT
-									University Bhubaneswar, Odisha with a passion for building
+									<strong className="text-white">Riya Chandra (riyachandra)</strong>,
+									a driven Computer Science and Engineering student at ABES Institute of Technology, Ghaziabad, Uttar Pradesh with a passion for building
 									innovative full-stack and AI-powered solutions. Originally from
 									Patna, Bihar, India.
 								</p>
 								<p>
 									My journey started with competitive programming, solving{" "}
 									<strong className="text-white">
-										720+ algorithmic challenges
+										500+ algorithmic challenges
 									</strong>{" "}
-									across LeetCode, GeeksforGeeks, and HackerRank. This foundation
+									across LeetCode, GeeksforGeeks, and Codechef. This foundation
 									shaped my problem-solving mindset and fueled my transition into
 									full-stack development and AI engineering.
 								</p>
@@ -123,7 +122,7 @@ export function About() {
 									Python, MongoDB, and PostgreSQL, while actively exploring
 									cutting-edge AI technologies like LangChain, LangGraph, RAG
 									systems, Azure OpenAI, and AI Agents. My projects on GitHub
-									(nikhilij) range from intelligent chatbots to enterprise-grade
+									(riyachandra) range from intelligent chatbots to enterprise-grade
 									REST APIs, deployed on AWS, Azure, and Google Cloud Platform.
 								</p>
 							</div>
@@ -295,264 +294,250 @@ export function About() {
 					</div>
 				</div>
 				{/* Current Focus */}
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					className="mt-20"
-				>
-					<GlassCard
-						className="relative p-8 overflow-hidden"
-						hoverEffect={false}
-					>
-						<ShineBorder
-							shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-							duration={14}
-							borderWidth={1}
-							className="hidden md:block"
-						/>
-						<div className="flex items-center justify-center gap-3 mb-6">
-							<Zap className="w-10 h-10 text-yellow-400" />
-							<h3 className="text-3xl font-bold">Currently Building</h3>
-						</div>
-						<p className="text-white/80 max-w-4xl mx-auto leading-relaxed mb-12 text-center">
-							I'm currently building a collection of AI-driven, developer-centric, and
-							scalable engineering systems that reflect the way modern tech ecosystems
-							actually work. My focus is on blending{" "}
-							<strong className="text-white">agentic AI</strong>,{" "}
-							<strong className="text-white">backend automation</strong>, and{" "}
-							<strong className="text-white">cloud-native architecture</strong> into
-							real products that solve real problems.
-						</p>
+				{/* Current Focus */}
+<motion.div
+	initial={{ opacity: 0, y: 20 }}
+	whileInView={{ opacity: 1, y: 0 }}
+	viewport={{ once: true }}
+	className="mt-20"
+>
+	<GlassCard className="relative p-8 overflow-hidden" hoverEffect={false}>
+		<ShineBorder
+			shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+			duration={14}
+			borderWidth={1}
+			className="hidden md:block"
+		/>
 
-						{/* Agentic AI Systems Section */}
-						<div className="mb-10">
-							<div className="flex items-center gap-3 mb-6">
-								<Brain className="w-6 h-6 text-purple-400" />
-								<h4 className="text-xl font-semibold text-purple-400">
-									Agentic AI Systems & Automation
-								</h4>
-							</div>
-							<div className="grid md:grid-cols-2 gap-4">
-								{/* AI AnswerBot 2.0 */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<Bot className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												AI AnswerBot 2.0
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Fully modular, containerized AI system powered by
-												Docker, Kubernetes, and LangGraph. Routes tasks,
-												reasons through workflows, and delegates
-												responsibilities across microservices.
-											</p>
-										</div>
-									</div>
-								</div>
+		<div className="flex items-center justify-center gap-3 mb-6">
+			<Zap className="w-10 h-10 text-yellow-400" />
+			<h3 className="text-3xl font-bold">Currently Building</h3>
+		</div>
 
-								{/* Intelligent File Organizer */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<FolderSync className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												Intelligent File Organizer
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Self-driven AI agent that watches your system,
-												understands file patterns, and organizes everything
-												autonomously — a glimpse into automated
-												productivity.
-											</p>
-										</div>
-									</div>
-								</div>
+		<p className="text-white/80 max-w-4xl mx-auto leading-relaxed mb-12 text-center">
+			I’m currently building automation systems, real-time collaboration tools,
+			and multi-agent AI architectures inspired directly by my hands-on
+			experience across backend engineering, real-time systems, and AI-driven workflows.
+		</p>
 
-								{/* Social Media AI Strategist */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<MessageSquare className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												Social-Media AI Strategist
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Multiple agents act like a content team — editor,
-												strategist, and platform creators for LinkedIn,
-												Twitter, Instagram. They collaborate to refine and
-												ship content.
-											</p>
-										</div>
-									</div>
-								</div>
+		{/* Multi-Agent AI Work */}
+		<div className="mb-10">
+			<div className="flex items-center gap-3 mb-6">
+				<Brain className="w-6 h-6 text-purple-400" />
+				<h4 className="text-xl font-semibold text-purple-400">
+					Multi-Agent Automation (From Resume)
+				</h4>
+			</div>
 
-								{/* Team Inventory AI */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<Package className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												Team Inventory AI
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Multi-agent system for retail workflows where
-												autonomous agents represent stores, warehouses,
-												suppliers, and customers — optimizing stock levels
-												collaboratively.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						{/* AI Engineering & Applied ML Section */}
-						<div className="mb-10">
-							<div className="flex items-center gap-3 mb-6">
-								<Rocket className="w-6 h-6 text-blue-400" />
-								<h4 className="text-xl font-semibold text-blue-400">
-									AI Engineering & Applied ML
-								</h4>
-							</div>
-							<div className="grid md:grid-cols-2 gap-4">
-								{/* Rocket Telemetry AI */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<BarChart3 className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												AI Telemetry Analyst
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Backend service for telemetry ingestion, anomaly
-												detection, and natural language Q&A. FastAPI +
-												PostgreSQL + LangGraph — an intelligent telemetry
-												monitoring system for rocket assets using AI-powered
-												anomaly detection and natural language querying.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								{/* AI Video Summarizer */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<Video className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												AI Video Summarizer
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Using Gemini 2.0 Flash, reduces long videos into
-												crisp summaries. Fast, reliable, and context-aware —
-												perfect for students, developers, and researchers.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								{/* CME Symbol Finder */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<DollarSign className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												CME Symbol Finder
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Natural-language-powered search engine for traders
-												using Next.js, Pinecone, Azure/OpenAI. Helps
-												discover futures and options instruments instantly
-												with full metadata.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								{/* Intelligent PDF Parser */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<FileText className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												Intelligent PDF Parser
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Uses OCR, LangChain, segmentation logic, and PyPDF
-												to extract structured content from large PDFs —
-												including tables, scanned data, and mixed formats.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						{/* Decentralized Data Section */}
+			<div className="grid md:grid-cols-2 gap-4">
+				{/* WhatsApp Personal Assistant */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<Bot className="w-5 h-5 text-blue-400 mt-1" />
 						<div>
-							<div className="flex items-center gap-3 mb-6">
-								<Shield className="w-6 h-6 text-emerald-400" />
-								<h4 className="text-xl font-semibold text-emerald-400">
-									Decentralized Data Ownership & Blockchain
-								</h4>
-							</div>
-							<div className="grid md:grid-cols-2 gap-4">
-								{/* DataVault */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<Shield className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												DataVault
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Long-term vision: consent-driven data ownership
-												system using smart contracts + AI governance
-												policies. Users control their data, decide access,
-												and revoke permissions anytime.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								{/* Decentralized Identity Research */}
-								<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform md:hover:scale-[1.02] will-change-transform">
-									<div className="flex items-start gap-3 mb-3">
-										<Fingerprint className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
-										<div>
-											<h5 className="font-semibold text-white mb-2">
-												Decentralized Identity Research
-											</h5>
-											<p className="text-sm text-white/70 leading-relaxed">
-												Exploring how NFTs and verifiable proofs can serve
-												as digital identity certificates for residence
-												verification, credentials, and document
-												authenticity.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
+							<h5 className="font-semibold text-white mb-2">
+								WhatsApp Personal Assistant
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								AI-powered assistant using FastAPI, LangChain multi-agent
+								architecture & Twilio — schedules events, manages Gmail, and
+								performs real-time research directly through chat.
+							</p>
 						</div>
-					</GlassCard>
-				</motion.div>{" "}
+					</div>
+				</div>
+
+				{/* Async Tool Calling */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<Package className="w-5 h-5 text-green-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Async Tool-Calling Pipeline
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Engineered Groq/OpenAI-powered async tool calling +
+								conversational memory using SQLite for production-grade agent
+								automation with seamless Gmail + Google Calendar integration.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{/* Real-Time Collaboration & Platforms */}
+		<div className="mb-10">
+			<div className="flex items-center gap-3 mb-6">
+				<Rocket className="w-6 h-6 text-blue-400" />
+				<h4 className="text-xl font-semibold text-blue-400">
+					Real-Time Systems & Collaboration (From Resume)
+				</h4>
+			</div>
+
+			<div className="grid md:grid-cols-2 gap-4">
+				{/* Coding Collab Platform */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<BarChart3 className="w-5 h-5 text-orange-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Coding Collab Platform
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Built real-time coding rooms with compiler, video/audio calls,
+								chat, whiteboard & solo-study modes. Added CRUD APIs for secure
+								user/session management.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Chat App */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<MessageSquare className="w-5 h-5 text-pink-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">Real-Time Chat App</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Created a low-latency chat system using Socket.IO & WebSockets —
+								fast message delivery, rooms, and real-time interactions.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Notes + DSA + Learning */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<FileText className="w-5 h-5 text-indigo-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Notes, DSA Quizzes & Student Feeds
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Designed a productivity suite — notes system, daily DSA quizzes,
+								and community feeds to boost learning consistency.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Event Handling System */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<FolderSync className="w-5 h-5 text-cyan-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Event Handling System
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Built full CRUD event management with advanced search,
+								filtering, categorization — improving discoverability by 25%.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		{/* Backend Engineering */}
+		<div className="mb-10">
+			<div className="flex items-center gap-3 mb-6">
+				<Shield className="w-6 h-6 text-emerald-400" />
+				<h4 className="text-xl font-semibold text-emerald-400">
+					Backend Engineering & Platform Work (From Resume)
+				</h4>
+			</div>
+
+			<div className="grid md:grid-cols-2 gap-4">
+
+				{/* Resume Builder + ATS */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<FileText className="w-5 h-5 text-teal-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Resume Builder + ATS Analyzer
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Developed resume generator with ATS scoring — increased job
+								application success rate by 30% during DEHIX internship.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Verification System */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<Fingerprint className="w-5 h-5 text-violet-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								User Verification System
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Implemented backend verification mechanisms reducing fraudulent
+								registrations by 35%.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Prompt Flow Engineering */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<Zap className="w-5 h-5 text-yellow-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Prompt Flow & Automation Logic
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Designed & optimized prompt-handling and automation logic using
+								OpenAI + LangChain for smooth platform operations.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Platform Process Engineering */}
+				<div className="p-5 rounded-lg bg-white/5 border border-white/10 md:hover:bg-white/10 transition-transform">
+					<div className="flex items-start gap-3 mb-3">
+						<Package className="w-5 h-5 text-orange-400 mt-1" />
+						<div>
+							<h5 className="font-semibold text-white mb-2">
+								Platform Process Re-Engineering
+							</h5>
+							<p className="text-sm text-white/70 leading-relaxed">
+								Restructured platform processes using Node.js + Firebase to
+								streamline service workflows and communication.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</GlassCard>
+</motion.div>
+{" "}
 				{/* Hidden SEO Content for Search Engines */}
 				<div
 					className="sr-only"
 					aria-hidden="true"
 				>
-					Nikhil Soni - Software Developer, Full-Stack Engineer, AI Engineer from KIIT
-					University Bhubaneswar Odisha India. GitHub username nikhilij. Expert in
+					Riya Chandra - Software Developer, Full-Stack Engineer, AI Engineer from ABESIT
+					Institute of Technology, Ghaziabad, Uttar Pradesh, India. GitHub username riyachandra. Expert in
 					React.js, Next.js, Node.js, Express.js, Python, TypeScript, JavaScript, MongoDB,
 					PostgreSQL, MySQL. AI/ML specialist in LangChain, LangGraph, RAG Systems, AI
 					Agents, MCP Servers, Azure OpenAI, Google Gemini. Cloud computing AWS, Azure,
-					GCP. DevOps Docker Kubernetes Linux. 720+ problems solved on LeetCode
-					GeeksforGeeks HackerRank. CGPA 8.61 Computer Science Engineering. From Patna
-					Bihar. Meta Backend Developer Certificate, freeCodeCamp JavaScript Certificate,
-					LinkedIn Learning certificates. Email nikhilprince973@gmail.com,
-					nikhiljsx@gmail.com. Phone +91-9263226570. Portfolio projects: CME Symbol Finder
+					Docker Kubernetes Linux. 500+ problems solved on LeetCode
+					GeeksforGeeks HackerRank. CGPA 8.0 Computer Science Engineering. From Patna
+					Bihar. 
+					Email riyachandra9119@gmail.com,
+					riyachandra9119@gmail.com. Portfolio projects: CME Symbol Finder
 					AI, Customer Support Chatbot, AI Video Summarizer, Wikipedia Summary Generator.
 					Open source contributor YoCodex platform developer.
 				</div>

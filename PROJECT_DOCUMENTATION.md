@@ -85,7 +85,7 @@ Modern, responsive portfolio website built with **Next.js 16**, **React 19**, **
 
 ```bash
 git clone <repository-url>
-cd niknew
+cd rc
 ```
 
 2. **Install dependencies**
@@ -194,7 +194,7 @@ npm run start
 ## 📁 Project Structure
 
 ```
-niknew/
+rc/
 ├── app/
 │   ├── api/
 │   │   └── send/           # Email API endpoint
@@ -404,12 +404,11 @@ This project is private. All rights reserved.
 
 ## 👨‍💻 Author
 
-**Nikhil Soni**
+**Riya Chandra**
 
-- Email: nikhilprince973@gmail.com
-- GitHub: [@nikhilij](https://github.com/nikhilij)
-- LinkedIn: [nikhilsoni973](https://linkedin.com/in/nikhilsoni973)
-- Phone: +91 9263226570
+- Email: riyachandra9119@gmail.com
+- GitHub: [@riyachandra](https://github.com/Riya-chandra)
+- LinkedIn: [@riyachandra](https://www.linkedin.com/in/riya-chandra-856657248/)
 
 ---
 
@@ -454,7 +453,7 @@ If you encounter any issues:
 1. Check documentation
 2. Review console logs
 3. Check [EMAIL_SETUP.md](./EMAIL_SETUP.md)
-4. Contact: nikhilprince973@gmail.com
+4. Contact: riyachandra9119@gmail.com
 
 ---
 

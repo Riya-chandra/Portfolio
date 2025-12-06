@@ -47,24 +47,24 @@ export function ProjectCTA({ id, className }: ProjectCTAProps) {
 							<p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
 								Reach out at{" "}
 								<a
-									href="mailto:nikhilprince973@gmail.com"
+									href="mailto:riyachandra9119@gmail.com"
 									className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
 								>
-									nikhilprince973@gmail.com
+									riyachandra9119@gmail.com
 								</a>{" "}
 								or call{" "}
 								<a
 									href="tel:+919263226570"
 									className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
 								>
-									+91 9263226570
+									+91 6206140151
 								</a>
 								.
 							</p>
 
 							<div className="flex items-center justify-center gap-2 text-white/80">
 								<MapPin className="w-4 h-4" />
-								<span>Based in Bhubaneswar, India</span>
+								<span>Based in ghaziabad, Uttar Pradesh, India</span>
 							</div>
 						</motion.div>
 
@@ -77,7 +77,7 @@ export function ProjectCTA({ id, className }: ProjectCTAProps) {
 						>
 							{/* Primary CTA Button */}
 							<motion.a
-								href="mailto:nikhilprince973@gmail.com?subject=Project%20Inquiry&body=Hi%20Nikhil,%0A%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0A%0A"
+								href="mailto:riyachandra9119@gmail.com"
 								className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
@@ -89,7 +89,7 @@ export function ProjectCTA({ id, className }: ProjectCTAProps) {
 							{/* Secondary Actions */}
 							<div className="flex gap-3">
 								<motion.a
-									href="mailto:nikhilprince973@gmail.com"
+									href="mailto:riyachandra9119@gmail.com"
 									className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-110"
 									whileHover={{ scale: 1.1 }}
 									whileTap={{ scale: 0.9 }}

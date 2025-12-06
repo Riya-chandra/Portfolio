@@ -26,12 +26,7 @@ import {
   SiBootstrap,
   SiPostman,
   SiGithub,
-  SiDjango,
-  SiRedis,
-  SiGraphql,
   SiSocketdotio,
-  SiJest,
-  SiPrisma,
   SiSupabase,
   SiVercel,
   SiNginx,
@@ -43,10 +38,10 @@ import {
   SiNumpy,
   SiPandas,
   SiFastapi,
-  SiFlask,
   SiFirebase,
-  SiRaspberrypi,
+  SiTwilio,
   SiArduino,
+  SiNgrok,
 } from "react-icons/si";
 import { FaAws, FaJava } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
@@ -68,18 +63,15 @@ const skillsData = [
   { name: "Node.js", icon: <SiNodedotjs className="w-8 h-8" /> },
   { name: "Express.js", icon: <SiExpress className="w-8 h-8" /> },
   { name: "Python", icon: <SiPython className="w-8 h-8" /> },
-  { name: "Django", icon: <SiDjango className="w-8 h-8" /> },
   { name: "FastAPI", icon: <SiFastapi className="w-8 h-8" /> },
-  { name: "Flask", icon: <SiFlask className="w-8 h-8" /> },
-  { name: "GraphQL", icon: <SiGraphql className="w-8 h-8" /> },
   { name: "Socket.io", icon: <SiSocketdotio className="w-8 h-8" /> },
 
   // Databases
   { name: "MongoDB", icon: <SiMongodb className="w-8 h-8" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="w-8 h-8" /> },
   { name: "SQL", icon: <Database className="w-8 h-8" /> },
-  { name: "Redis", icon: <SiRedis className="w-8 h-8" /> },
-  { name: "Prisma", icon: <SiPrisma className="w-8 h-8" /> },
+  // { name: "Redis", icon: <SiRedis className="w-8 h-8" /> },
+  // { name: "Prisma", icon: <SiPrisma className="w-8 h-8" /> },
   { name: "Supabase", icon: <SiSupabase className="w-8 h-8" /> },
   { name: "Firebase", icon: <SiFirebase className="w-8 h-8" /> },
 
@@ -106,7 +98,6 @@ const skillsData = [
   { name: "GitHub", icon: <SiGithub className="w-8 h-8" /> },
   { name: "VS Code", icon: <BiLogoVisualStudio className="w-8 h-8" /> },
   { name: "Postman", icon: <SiPostman className="w-8 h-8" /> },
-  { name: "Jest", icon: <SiJest className="w-8 h-8" /> },
   { name: "Linux", icon: <SiLinux className="w-8 h-8" /> },
   { name: "PowerShell", icon: <Terminal className="w-8 h-8" /> },
 
@@ -114,20 +105,19 @@ const skillsData = [
   { name: "C/C++", icon: <SiCplusplus className="w-8 h-8" /> },
   { name: "Java", icon: <FaJava className="w-8 h-8" /> },
 
-  // IoT & Hardware
-  { name: "Raspberry Pi", icon: <SiRaspberrypi className="w-8 h-8" /> },
-  { name: "Arduino", icon: <SiArduino className="w-8 h-8" /> },
+ {name:"nrrok",icon:<SiNgrok  className="w-10 h-10"/>},
+ {name:"Twilio",icon:<SiTwilio className="w-8 h-8"/>}
 ];
 
 const stats = [
   {
     icon: <Code2 className="w-8 h-8" />,
-    count: "50+",
+    count: "20+",
     label: "JavaScript & Node.js Projects",
   },
   {
     icon: <SiReact className="w-8 h-8" />,
-    count: "20+",
+    count: "10+",
     label: "React.js Applications",
   },
   {
@@ -137,7 +127,7 @@ const stats = [
   },
   {
     icon: <Terminal className="w-8 h-8" />,
-    count: "10+",
+    count: "5+",
     label: "Automations & CLI Tools",
   },
 ];

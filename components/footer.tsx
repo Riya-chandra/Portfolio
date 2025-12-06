@@ -80,7 +80,7 @@ export function Footer() {
 							href="/"
 							className="text-2xl font-bold tracking-tighter mb-6 block"
 						>
-							NIKHIL<span className="text-blue-400">.</span>
+							RIYA<span className="text-blue-400">.</span>
 						</Link>
 						<p className="text-white/50 leading-relaxed">
 							Passionate Software Engineer building scalable web applications with
@@ -145,7 +145,7 @@ export function Footer() {
 						<ul className="space-y-4 text-white/60">
 							<li>
 								<Link
-									href="https://github.com/nikhilij"
+									href="https://github.com/Riya-chandra"
 									target="_blank"
 									className="hover:text-white transition-colors flex items-center gap-2 group"
 								>
@@ -155,7 +155,7 @@ export function Footer() {
 							</li>
 							<li>
 								<Link
-									href="https://linkedin.com/in/nikhilsoni973"
+									href="https://www.linkedin.com/in/riya-chandra-856657248/"
 									target="_blank"
 									className="hover:text-white transition-colors flex items-center gap-2 group"
 								>
@@ -165,7 +165,7 @@ export function Footer() {
 							</li>
 							<li>
 								<Link
-									href="mailto:nikhilprince973@gmail.com"
+									href="mailto:riyachandra9119@gmail.com"
 									className="hover:text-white transition-colors flex items-center gap-2 group"
 								>
 									<Mail className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
@@ -314,7 +314,7 @@ export function Footer() {
 
 				{/* Footer bottom row */}
 				<div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 text-sm text-white/40">
-					<p>&copy; 2025 Nikhil Soni. All rights reserved.</p>
+					<p>&copy; 2025 Riya Chandra. All rights reserved.</p>
 					<div className="flex items-center gap-6 mt-4 md:mt-0">
 						<Link
 							href="#"

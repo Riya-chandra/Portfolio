@@ -1,14 +1,14 @@
 {
-    "name": "Nikhil Soni - Software Developer Portfolio",
-    "short_name": "Nikhil Soni | nikhilij",
-    "description": "Nikhil Soni (nikhilij) - Full-Stack Developer and AI Engineer from KIIT University. React.js, Node.js, Python, AI/ML expert. 720+ problems solved.",
+    "name": "Riya Chandra - Software Developer Portfolio",
+    "short_name": "Riya Chandra | riyachandra",
+    "description": "Riya Chandra (riyachandra) - Full-Stack Developer and AI Engineer from ABESIT. React.js, Node.js, Python, AI/ML expert. 500+ problems solved.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#3b82f6",
     "icons": [
         {
-            "src": "/profile.png",
+            "src": "/profile.jpg",
             "sizes": "192x192",
             "type": "image/png"
         }

@@ -8,46 +8,26 @@ import { ExternalLink, Award } from "lucide-react";
 const certifications = [
 	{
 		title: "Meta Backend Developer Professional Certificate",
-		issuer: "Coursera & Meta",
-		date: "June 2025",
-		link: "https://coursera.org/share/e902ea9fd45cb2efc1de18334ebe34ee",
-		image: "/p10.jpg",
+		issuer: "APNA COLLEGE",
+		date: "Jan 2025",
+		link: "https://drive.google.com/file/d/1xNzUlMYzODtsmfOowZrCPiAhk2-aA8xJ/view?usp=drive_link",
+		image: "/p10.png",
 	},
 	{
-		title: "Learning Git and GitHub",
-		issuer: "LinkedIn",
-		date: "June 2024",
-		link: "https://www.linkedin.com/learning/certificates/aeda61d6ba2071c04f874c0a147144737430680596afac2363bf34ae69cabc4f",
-		image: "/p5.jpg",
+		title: "Intership",
+		issuer: "Dehix Pvt Ltd",
+		date: "March 2025",
+		link: "https://drive.google.com/file/d/1ffsv7FBJfOTOYn4CsFu3ihK97quzSNY8/view?usp=drive_link",
+		image: "/p5.png",
 	},
 	{
-		title: "Career Essentials in Software Development",
-		issuer: "Microsoft & LinkedIn",
-		date: "May 2024",
-		link: "https://www.linkedin.com/learning/certificates/44fabd3b2484caec9dec7473c9c0fa2bc19b847c0791345d1db1ca8f26bf3076",
-		image: "/p6.jpg",
+		title: "Artificial Intelligence",
+		issuer: "Infosys",
+		date: "Oct 2025",
+		link: "https://drive.google.com/file/d/17oa83hX9hMiCLdNH00odKKo58tAd4u1i/view?usp=drive_link",
+		image: "/p6.png",
 	},
-	{
-		title: "JavaScript Algorithms and Data Structures",
-		issuer: "freeCodeCamp",
-		date: "May 2024",
-		link: "https://www.freecodecamp.org/certification/Nikhil_Soni/javascript-algorithms-and-data-structures",
-		image: "/p7.png",
-	},
-	{
-		title: "Node.js Essential Training",
-		issuer: "LinkedIn",
-		date: "May 2024",
-		link: "https://www.linkedin.com/learning/certificates/a9573d2894abd382da006d80f5cd04407e1b1891893f884172ce21daad12074b",
-		image: "/p8.jpg",
-	},
-	{
-		title: "6-Week C++ Course Online",
-		issuer: "GeeksforGeeks",
-		date: "January 2025",
-		link: "https://www.geeksforgeeks.org/certificate/bc58c7bf649ae1973cba2e7a2170ac44",
-		image: "/p9.jpg",
-	},
+
 ];
 
 export function Certificates() {
@@ -125,7 +105,7 @@ export function Certificates() {
 					className="mt-12 text-center"
 				>
 					<a
-						href="https://www.linkedin.com/in/nikhilsoni973"
+						href="https://www.linkedin.com/in/riya-chandra-856657248"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-block px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-colors text-sm font-medium"

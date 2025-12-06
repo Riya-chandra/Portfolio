@@ -21,8 +21,8 @@ Success   → GREEN ✅
 ### Email Details
 
 ```
-From      → nikhiljsx@gmail.com (configured in .env.local)
-To        → nikhilprince973@gmail.com (in route.ts)
+From      → xyz@gmail.com (configured in .env.local)
+To        → riyachandra9119@gmail.com (in route.ts)
 Reply-To  → User's email from form
 Service   → Gmail SMTP via Nodemailer
 ```
@@ -60,7 +60,7 @@ components/footer.tsx     # Contact form UI
 
 ```bash
 # Required in .env.local
-EMAIL_USER=nikhiljsx@gmail.com
+EMAIL_USER=riyachandra9119@gmail.com
 EMAIL_PASS=gjbvgrylwtcenixs
 ```
 
@@ -152,7 +152,7 @@ npm run build
 - [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md)
 - [EMAIL_SETUP.md](./EMAIL_SETUP.md)
 
-**Email**: nikhilprince973@gmail.com
+**Email**: riyachandra9119@gmail.com
 
 ---
 
