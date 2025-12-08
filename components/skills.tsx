@@ -117,7 +117,7 @@ const stats = [
   },
   {
     icon: <SiReact className="w-8 h-8" />,
-    count: "10+",
+    count: "6+",
     label: "React.js Applications",
   },
   {
