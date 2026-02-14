@@ -8,7 +8,7 @@ const projects = [
 	{
 		title: "Multi-Agent WhatsApp Automation System",
 		category: "AI Automation | Multi-Agent Architecture",
-		image: "/whatsapp-ai.jpg",
+		// image: "/whatsapp-ai.jpg",
 		color: "from-sky-500/20 to-indigo-600/20",
 		link: "https://github.com/Riya-chandra/MultiTaskAssitant",
 		description:
@@ -148,7 +148,7 @@ export function Work() {
 									</div>
 									<div className="relative h-[400px] md:h-auto overflow-hidden">
 										<Image
-											src={project.image || "/placeholder.svg"}
+											src={project.image }
 											alt={project.title}
 											fill
 											className="object-cover transition-transform duration-700 group-hover:scale-110"

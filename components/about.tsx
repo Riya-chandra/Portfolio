@@ -340,7 +340,7 @@ export function About() {
 							</h5>
 							<p className="text-sm text-white/70 leading-relaxed">
 								AI-powered assistant using FastAPI, LangChain multi-agent
-								architecture & Twilio — schedules events, manages Gmail, and
+								architecture & Twilio schedules events, manages Gmail, and
 								performs real-time research directly through chat.
 							</p>
 						</div>
